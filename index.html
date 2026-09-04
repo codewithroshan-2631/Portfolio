@@ -5,91 +5,123 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Professional Portfolio - Full Stack Developer">
-  <title>Professional Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Portfolio</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%233b82f6'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle' fill='white'%3ER%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
 </head>
 
 <body>
+  
   <!-- Navigation -->
-  <nav id="navbar" aria-label="Main Navigation bg-red-200">
-    <div class="nav-container">
-      <!-- Logo with animation -->
-      <div class="logo">
-        <a href="#home" aria-label="Portfolio Home">
-          <div class="logo-container">
-            <span class="logo-icon">
-              <i class="fas fa-code"></i>
-            </span>
-            <span class="logo-text">
-              <span class="logo-primary">Roshan</span>
-              <span class="logo-secondary">Manjhi</span>
-            </span>
-          </div>
+  <nav id="navbar" aria-label="Main Navigation">
+  <div class="nav-container">
+    <!-- Logo -->
+    <div class="logo">
+      <a href="#home" aria-label="Portfolio Home">
+        <div class="logo-container">
+          <span class="logo-icon">
+            <i class="fas fa-code"></i>
+          </span>
+          <span class="logo-text">
+            <span class="logo-primary">Roshan</span>
+            <span class="logo-secondary">Manjhi</span>
+          </span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Main Navigation Links -->
+    <ul class="nav-links" role="menubar">
+      <li role="none">
+        <a href="#home" class="nav-link active" role="menuitem" data-nav="home">
+          <span class="nav-text">Home</span>
+          <span class="nav-indicator"></span>
         </a>
+      </li>
+      <li role="none">
+        <a href="#about" class="nav-link" role="menuitem" data-nav="about">
+          <span class="nav-text">About</span>
+          <span class="nav-indicator"></span>
+        </a>
+      </li>
+      <li role="none">
+        <a href="#skills" class="nav-link" role="menuitem" data-nav="skills">
+          <span class="nav-text">Skills</span>
+          <span class="nav-indicator"></span>
+        </a>
+      </li>
+      <li role="none">
+        <a href="#certificates" class="nav-link" role="menuitem" data-nav="certificates">
+          <span class="nav-text">Certificates</span>
+          <span class="nav-indicator"></span>
+        </a>
+      </li>
+      <li role="none">
+        <a href="#projects" class="nav-link" role="menuitem" data-nav="projects">
+          <span class="nav-text">Projects</span>
+          <span class="nav-indicator"></span>
+        </a>
+      </li>
+      <li role="none">
+        <a href="#contact" class="nav-link" role="menuitem" data-nav="contact">
+          <span class="nav-text">Contact</span>
+          <span class="nav-indicator"></span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Right side navigation controls -->
+    <div class="nav-controls">
+      <!-- 🌙☀️ THEME TOGGLE BUTTON -->
+      <button class="nav-control theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+        <i class="fas fa-moon theme-icon"></i>
+        <span class="control-tooltip">Toggle Theme</span>
+      </button>
+
+
+
+      <button class="nav-control menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="hamburger" aria-hidden="true">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </span>
+      </button>
+    </div>
+  </div>
+  <!-- Navigation Progress Bar -->
+  <div class="nav-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+    <div class="nav-progress-bar"></div>
+  </div>
+</nav>
+
+  <div class="mobile-overlay" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-panel">
+      <div class="mobile-menu-header">
+        <span class="mobile-menu-title">Menu</span>
+        <button class="mobile-close" type="button" aria-label="Close menu">
+          <i class="fas fa-times"></i>
+        </button>
       </div>
 
-      <!-- Main Navigation Links -->
-      <ul class="nav-links" role="menubar">
-        <li role="none">
-          <a href="#home" class="nav-link active" role="menuitem" data-nav="home">
-
-            <span class="nav-text">Home</span>
-            <span class="nav-indicator"></span>
-          </a>
-        </li>
-        <li role="none">
-          <a href="#about" class="nav-link" role="menuitem" data-nav="about">
-
-            <span class="nav-text">About</span>
-            <span class="nav-indicator"></span>
-          </a>
-        </li>
-        <li role="none">
-          <a href="#skills" class="nav-link" role="menuitem" data-nav="skills">
-
-            <span class="nav-text">Skills</span>
-            <span class="nav-indicator"></span>
-          </a>
-        </li>
-        <li role="none">
-          <a href="#certificates" class="nav-link" role="menuitem" data-nav="certificates">
-
-            <span class="nav-text">Certificates</span>
-            <span class="nav-indicator"></span>
-          </a>
-        </li>
-        <li role="none">
-          <a href="#projects" class="nav-link" role="menuitem" data-nav="projects">
-
-            <span class="nav-text">Projects</span>
-            <span class="nav-indicator"></span>
-          </a>
-        </li>
-        <li role="none">
-          <a href="#contact" class="nav-link" role="menuitem" data-nav="contact">
-
-            <span class="nav-text">Contact</span>
-            <span class="nav-indicator"></span>
-          </a>
-        </li>
-      </ul>
-      <!-- Right side navigation controls -->
-      <div class="nav-controls">
-        <!-- Download CV Button -->
-        <a href="./Roshan_resume_removed (1).pdf" class="nav-control download-cv" download aria-label="Download CV" title="Download CV">
-          <i class="fas fa-download"></i>
-          <span class="cv-text">Download CV</span>
-          <span class="control-tooltip">Download Resume</span>
-        </a>
+      <div class="mobile-nav-links">
+        <a href="#home" class="mobile-nav-link active">Home</a>
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#skills" class="mobile-nav-link">Skills</a>
+        <a href="#certificates" class="mobile-nav-link">Certificates</a>
+        <a href="#projects" class="mobile-nav-link">Projects</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
       </div>
+
+      <a href="" class="mobile-download-cv" download>
+        <i class="fas fa-download"></i>
+        <span>Download CV</span>
+      </a>
     </div>
-    <!-- Navigation Progress Bar -->
-    <div class="nav-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-      <div class="nav-progress-bar"></div>
-    </div>
-  </nav>
+  </div>
   <!-- Hero Section -->
   <section id="home" class="hero">
     <!-- Particles Container -->
@@ -97,7 +129,7 @@
     <div class="hero-content">
       <!-- Your existing content -->
       <div class="profile-photo">
-        <img src="roshan.jpg" alt="Profile Photo" id="profileImage" />
+        <img src="roshan.png.jpeg" alt="Profile Photo" id="profileImage" width="240" height="240" />
       </div>
 
       <h1>Hi, I'm <span>Roshan Manjhi</span></h1>
@@ -118,24 +150,144 @@
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2 class="section-title">About Me</h2>
-    <p class="section-subtitle">Get to know more about my journey</p>
-    <div class="about-content">
-      <div class="about-text">
-        <h3>Hello! I'm a Full Stack Developer</h3>
-        <p>A passionate Full Stack Developer with expertise in modern web technologies. I'm currently pursuing a degree in Computer Science and have a strong foundation in both frontend and backend development.</p>
+<!-- Enhanced About Section with Premium Background -->
+<section id="about" class="about-section">
+  <!-- Enhanced Background Elements -->
+  <div class="about-bg-elements">
+    <div class="about-orb about-orb-1"></div>
+    <div class="about-orb about-orb-2"></div>
+    <div class="about-orb about-orb-3"></div>
+    <div class="about-orb about-orb-4"></div>
+  </div>
 
-                <p>  I enjoy creating innovative, functional, and visually appealing web solutions. My journey in programming started with curiosity and has evolved into a passion for building things that make a difference.</p>
+  <!-- Animated grid overlay -->
+  <div class="about-grid-overlay"></div>
 
-        <a href="#contact" class="btn btn-primary">Let's Connect</a>
+  <div class="about-container">
+    <!-- Section Header -->
+    <div class="about-header">
+      <div class="about-badge">
+        <i class="fas fa-user-astronaut"></i>
+        <span>About Me</span>
       </div>
-      <div class="about-image">
-        <img src="https://codelearning.in/wp-content/uploads/2023/12/web-development-course.png" alt="Developer workspace" />
+      <h2 class="about-title">
+        <span class="title-line">Get to know</span>
+        <span class="title-highlight">more about my journey</span>
+      </h2>
+      <div class="title-underline"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="about-content-wrapper">
+      <!-- Left Column - Text Content -->
+      <div class="about-text-column">
+        <div class="about-greeting">
+          <span class="wave-emoji">👋</span>
+          <h3>Hello! I'm a <span class="gradient-text">Full Stack Developer</span></h3>
+        </div>
+
+        <div class="about-description">
+          <p class="about-p">
+            A passionate Full Stack Developer with expertise in modern web technologies. 
+            I have completed my <strong>BSc. in Computer Science</strong> from Mumbai University.
+          </p>
+
+          <p class="about-p">
+            I enjoy creating innovative, functional, and visually appealing web solutions. 
+            My journey in programming started with curiosity and has evolved into a passion 
+            for building things that make a difference.
+          </p>
+        </div>
+
+        <!-- Stats / Highlights -->
+        <div class="about-stats">
+          <div class="stat-item">
+            <div class="stat-number" data-target="2">10</div>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="15">15</div>
+            <span class="stat-label">Projects Completed</span>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="8">10</div>
+            <span class="stat-label">Certifications</span>
+          </div>
+        </div>
+
+        <!-- Tech Stack Quick Tags -->
+        <div class="about-tech-tags">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Flask</span>
+          <span class="tech-tag">Tailwind CSS</span>
+          <span class="tech-tag">MongoDB</span>
+          <span class="tech-tag">Git</span>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="about-cta">
+          <a href="#contact" class="about-btn about-btn-primary">
+            <i class="fas fa-paper-plane"></i>
+            Let's Connect
+            <span class="btn-ripple"></span>
+          </a>
+          <a href="Roshan_Manjhi_Professional_Resume.pdf" class="about-btn about-btn-secondary" download>
+            <i class="fas fa-download"></i>
+            Download CV
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column - Image/Visual -->
+      <div class="about-image-column">
+        <div class="about-image-wrapper">
+          <div class="about-image-container">
+            <img 
+              src="https://codelearning.in/wp-content/uploads/2023/12/web-development-course.png" 
+              alt="Developer workspace" 
+              class="about-main-image"
+              loading="lazy"
+            />
+            
+            <!-- Floating badges on image -->
+            <div class="floating-badge badge-1">
+              <i class="fas fa-code"></i>
+              <span>Full Stack</span>
+            </div>
+            <div class="floating-badge badge-2">
+              <i class="fas fa-rocket"></i>
+              <span>10+ Projects</span>
+            </div>
+            <div class="floating-badge badge-3">
+              <i class="fas fa-certificate"></i>
+              <span>Certified</span>
+            </div>
+          </div>
+
+          <!-- Experience Ring -->
+          <div class="experience-ring">
+            <svg viewBox="0 0 120 120">
+              <defs>
+                <linearGradient id="ringGradient">
+                  <stop offset="0%" stop-color="#6366f1"/>
+                  <stop offset="100%" stop-color="#8b5cf6"/>
+                </linearGradient>
+              </defs>
+              <circle class="ring-bg" cx="60" cy="60" r="52"/>
+              <circle class="ring-progress" cx="60" cy="60" r="52" 
+                stroke-dasharray="326.7" stroke-dashoffset="65.3"/>
+            </svg>
+            <div class="ring-content">
+              <span class="ring-number">2+</span>
+              <span class="ring-label">Years</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
  <!-- ===== ENHANCED EDUCATION SECTION (FULL ANIMATION + MODERN GLASS) ===== -->
   <section id="education">
     <div class="edu-orb edu-orb-1"></div>
@@ -300,7 +452,7 @@
         <div class="skill-card-3d" data-skill="flask">
           <div class="skill-card-inner">
             <div class="skill-icon has-image">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg"
+              <img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg"
                 alt="Flask" />
             </div>
             <h4>Flask</h4>
@@ -321,7 +473,7 @@
         <div class="skill-card-3d" data-skill="tailwind">
           <div class="skill-card-inner">
             <div class="skill-icon has-image">
-              <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind CSS" />
+              <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind CSS" />
             </div>
             <h4>Tailwind CSS</h4>
             <p>CSS Framework</p>
@@ -340,7 +492,7 @@
         <div class="skill-card-3d" data-skill="postgresql">
           <div class="skill-card-inner">
             <div class="skill-icon has-image">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg" alt="PostgreSQL" />
+              <img loading="lazy" decoding="async" src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg" alt="PostgreSQL" />
             </div>
             <h4>SQLite</h4>
             <p>Relational Database</p>
@@ -350,7 +502,7 @@
         <div class="skill-card-3d" data-skill="mysql">
           <div class="skill-card-inner">
             <div class="skill-icon">
-              <img src="https://www.ortussolutions.com/__media/contentbox:2023/products/MongoDB/MongoDB.svg" alt="MongoDB" />
+              <img loading="lazy" decoding="async" src="https://www.ortussolutions.com/__media/contentbox:2023/products/MongoDB/MongoDB.svg" alt="MongoDB" />
             </div>
             <h4>MongoDB</h4>
             <p>NoSQL Database</p>
@@ -398,7 +550,7 @@
         <div class="skill-card-3d" data-skill="excel">
           <div class="skill-card-inner">
             <div class="skill-icon has-image">
-              <img src="https://cdn.worldvectorlogo.com/logos/excel-4.svg" alt="MS Excel"
+              <img loading="lazy" decoding="async" src="https://cdn.worldvectorlogo.com/logos/excel-4.svg" alt="MS Excel"
                 onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg';" />
             </div>
             <h4>MS Excel</h4>
@@ -409,7 +561,7 @@
         <div class="skill-card-3d" data-skill="word">
           <div class="skill-card-inner">
             <div class="skill-icon has-image">
-              <img src="https://cdn.worldvectorlogo.com/logos/word-1.svg" alt="MS Word"
+              <img loading="lazy" decoding="async" src="https://cdn.worldvectorlogo.com/logos/word-1.svg" alt="MS Word"
                 onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/f/fd/Microsoft_Office_Word_%282019%E2%80%93present%29.svg';" />
             </div>
             <h4>MS Word</h4>
@@ -430,7 +582,7 @@
         <div class="skill-card-3d" data-skill="tally">
           <div class="skill-card-inner">
             <div class="skill-icon has-image">
-              <img src="https://tse3.mm.bing.net/th/id/OIP.Q1ySkLeL69MNqqdszqqv4wAAAA?pid=Api&P=0&h=180"
+              <img loading="lazy" decoding="async" src="https://tse3.mm.bing.net/th/id/OIP.Q1ySkLeL69MNqqdszqqv4wAAAA?pid=Api&P=0&h=180"
                 alt="Tally Prime"
                 onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iMTAiIGZpbGw9IiNGRjZCMzUiLz4KPHBhdGggZD0iTTIwIDI1SDUwVjU1SDIwVjI1WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTMwIDM1SDUwVjQ1SDMwVjM1WiIgZmlsbD0iI0ZGNkIzNSIvPgo8cGF0aCBkPSJNMzAgMjVINTBWNTBIMzBWMjVaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMzAgMzVINTBWNDVIMzBWMzVaIiBmaWxsPSIjRkY2QjM1Ii8+CjxwYXRoIGQ9Ik0zMCAzNUg0MFY0NUgzMFYzNVoiIGZpbGw9IndoaXRlIi8+Cjx0ZXh0IHg9IjQwIiB5PSI2NSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwIiBmaWxsPSJ3aGl0ZSI+VGFsbHkgUHJpbWU8L3RleHQ+Cjwvc3ZnPgo='">
             </div>
@@ -441,280 +593,1055 @@
       </div>
     </div>
   </section>
-  <!---Certifications Section -->
-  <section id="certificates">
-    <h2 class="section-title">Certificates</h2>
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Certificate 1 -->
-                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 p-6 rounded-2xl shadow-lg card-hover border-2 border-indigo-100">
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center">
-                            <span class="text-3xl">🏆</span>
-                        </div>
-                        <span class="bg-indigo-600 text-white px-3 py-1 rounded-full text-sm">2026</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Python Development</h3>
-                    <p class="text-gray-600 mb-4">Certificate of Completion</p>
-                    <div class="flex items-center text-sm text-indigo-600 font-semibold">
-                        View Certificate →
-                    </div>
-                </div>
+  <!--- Certifications Section -->
+<!-- ============================================
+     PREMIUM CERTIFICATES SECTION - ULTIMATE DESIGN
+     ============================================ -->
+<section id="certificates" class="certificates-section">
+  <!-- Animated Background -->
+  <div class="cert-bg-animation">
+    <div class="cert-particle cert-particle-1"></div>
+    <div class="cert-particle cert-particle-2"></div>
+    <div class="cert-particle cert-particle-3"></div>
+    <div class="cert-particle cert-particle-4"></div>
+    <div class="cert-particle cert-particle-5"></div>
+    <div class="cert-particle cert-particle-6"></div>
+    <div class="cert-orb cert-orb-1"></div>
+    <div class="cert-orb cert-orb-2"></div>
+    <div class="cert-orb cert-orb-3"></div>
+    <div class="cert-grid-line"></div>
+  </div>
 
-                <!-- Certificate 2 -->
-                <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl shadow-lg card-hover border-2 border-purple-100">
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center">
-                            <span class="text-3xl">🎓</span>
-                        </div>
-                        <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm">2026</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">ICAT Certificate</h3>
-                    <p class="text-gray-600 mb-4">Certified by Code Institute</p>
-                    <div class="flex items-center text-sm text-purple-600 font-semibold">
-                        View Certificate →
-                    </div>
-                </div>
+  <div class="cert-container">
+    <!-- Premium Header -->
+    <div class="cert-header">
+      <div class="cert-badge">
+        <span class="cert-badge-icon">🏆</span>
+        <span>Certifications & Achievements</span>
+        <span class="cert-badge-pulse"></span>
+      </div>
+      
+      <h2 class="cert-title">
+        <span class="cert-title-line">My Professional</span>
+        <span class="cert-title-highlight">Credentials</span>
+      </h2>
+      
+      <p class="cert-subtitle">
+        Recognized for excellence in technology, development, and innovation
+      </p>
+      
+      <div class="cert-title-underline">
+        <span class="underline-dot"></span>
+        <span class="underline-dot"></span>
+        <span class="underline-dot"></span>
+      </div>
+    </div>
 
-                <!-- Certificate 3 -->
-                <div class="bg-gradient-to-br from-pink-50 to-red-50 p-6 rounded-2xl shadow-lg card-hover border-2 border-pink-100">
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-red-600 rounded-xl flex items-center justify-center">
-                            <span class="text-3xl">⭐</span>
-                        </div>
-                        <span class="bg-pink-600 text-white px-3 py-1 rounded-full text-sm">2025</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Yuga Yatra Certificate</h3>
-                    <p class="text-gray-600 mb-4">Certified by Design Academy</p>
-                    <div class="flex items-center text-sm text-pink-600 font-semibold">
-                        View Certificate →
-                    </div>
-                </div>
+    <!-- Certificate Grid -->
+    <div class="cert-grid">
+      <!-- Card 1 - SQL -->
+      <div class="cert-card" data-category="database">
+        <div class="cert-card-glow"></div>
+        <div class="cert-card-shine"></div>
+        
+        <div class="cert-card-header">
+          <div class="cert-icon-wrapper cert-icon-sql">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 7h16M4 12h16M4 17h10"/>
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+            </svg>
+          </div>
+          <div class="cert-header-right">
+            <span class="cert-year-badge">
+              <i class="fas fa-calendar-check"></i> 2026
+            </span>
+            <span class="cert-verified">
+              <i class="fas fa-check-circle"></i> Verified
+            </span>
+          </div>
+        </div>
 
-                <!-- Certificate 4 -->
-                <div class="bg-gradient-to-br from-cyan-50 to-blue-50 p-6 rounded-2xl shadow-lg card-hover border-2 border-cyan-100">
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
-                            <span class="text-3xl">💎</span>
-                        </div>
-                        <span class="bg-cyan-600 text-white px-3 py-1 rounded-full text-sm">2025</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Tailwind CSS Mastery</h3>
-                    <p class="text-gray-600 mb-4">Certified by CSS Masters</p>
-                    <div class="flex items-center text-sm text-cyan-600 font-semibold">
-                        View Certificate →
-                    </div>
-                </div>
-
-                <!-- Certificate 5 -->
-                <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-2xl shadow-lg card-hover border-2 border-green-100">
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center">
-                            <span class="text-3xl">🚀</span>
-                        </div>
-                        <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm">2026</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Full Stack Development</h3>
-                    <p class="text-gray-600 mb-4">Certified by Dev Academy</p>
-                    <div class="flex items-center text-sm text-green-600 font-semibold">
-                        View Certificate →
-                    </div>
-                </div>
-
-                <!-- Certificate 6 -->
-                <div class="bg-gradient-to-br from-orange-50 to-amber-50 p-6 rounded-2xl shadow-lg card-hover border-2 border-orange-100">
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-600 rounded-xl flex items-center justify-center">
-                            <span class="text-3xl">🌟</span>
-                        </div>
-                        <span class="bg-orange-600 text-white px-3 py-1 rounded-full text-sm">2026</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">UI/UX Design Principles</h3>
-                    <p class="text-gray-600 mb-4">Certified by Design Pro</p>
-                    <div class="flex items-center text-sm text-orange-600 font-semibold">
-                        View Certificate →
-                    </div>
-                </div>
+        <div class="cert-card-body">
+          <div class="cert-card-top">
+            <h3 class="cert-card-title">SQL Mastery</h3>
+            <div class="cert-card-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
             </div>
-            </section>
+          </div>
+          
+          <p class="cert-card-description">
+            Advanced database management and optimization certification. Demonstrated expertise in complex queries, performance tuning, and data architecture.
+          </p>
+          
+          <div class="cert-card-meta">
+            <span class="cert-provider">
+              <i class="fas fa-building"></i>
+              Professional Certification
+            </span>
+            <span class="cert-skills">
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">Database</span>
+              <span class="skill-tag">Optimization</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="cert-card-footer">
+          <a href="sql.png.jpeg" target="_blank" class="cert-btn cert-btn-primary">
+            <span class="btn-content">
+              <i class="fas fa-external-link-alt"></i>
+              View Certificate
+            </span>
+            <span class="btn-hover-effect"></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2 - Deloitte -->
+      <div class="cert-card" data-category="corporate">
+        <div class="cert-card-glow"></div>
+        <div class="cert-card-shine"></div>
+        
+        <div class="cert-card-header">
+          <div class="cert-icon-wrapper cert-icon-deloitte">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <path d="M9 9h6M9 12h4M9 15h6"/>
+            </svg>
+          </div>
+          <div class="cert-header-right">
+            <span class="cert-year-badge">
+              <i class="fas fa-calendar-check"></i> 2026
+            </span>
+            <span class="cert-verified">
+              <i class="fas fa-check-circle"></i> Verified
+            </span>
+          </div>
+        </div>
+
+        <div class="cert-card-body">
+          <div class="cert-card-top">
+            <h3 class="cert-card-title">Deloitte Technology</h3>
+            <div class="cert-card-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          
+          <p class="cert-card-description">
+            Completed Deloitte's prestigious Technology Job Simulation. Gained hands-on experience in real-world problem solving, technical consulting, and industry best practices.
+          </p>
+          
+          <div class="cert-card-meta">
+            <span class="cert-provider">
+              <i class="fas fa-building"></i>
+              Fortune 500
+            </span>
+            <span class="cert-skills">
+              <span class="skill-tag">Consulting</span>
+              <span class="skill-tag">Technology</span>
+              <span class="skill-tag">Strategy</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="cert-card-footer">
+          <a href="Deloite.png.jpeg" target="_blank" class="cert-btn cert-btn-primary">
+            <span class="btn-content">
+              <i class="fas fa-external-link-alt"></i>
+              View Certificate
+            </span>
+            <span class="btn-hover-effect"></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3 - Yuga Yatra -->
+      <div class="cert-card" data-category="internship">
+        <div class="cert-card-glow"></div>
+        <div class="cert-card-shine"></div>
+        
+        <div class="cert-card-header">
+          <div class="cert-icon-wrapper cert-icon-yuga">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <div class="cert-header-right">
+            <span class="cert-year-badge">
+              <i class="fas fa-calendar-check"></i> 2025
+            </span>
+            <span class="cert-verified">
+              <i class="fas fa-check-circle"></i> Verified
+            </span>
+          </div>
+        </div>
+
+        <div class="cert-card-body">
+          <div class="cert-card-top">
+            <h3 class="cert-card-title">Yuga Yatra Internship</h3>
+            <div class="cert-card-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          
+          <p class="cert-card-description">
+            Software Engineering Internship with hands-on development experience. Worked on real-world projects, collaborated with cross-functional teams, and delivered production-ready code.
+          </p>
+          
+          <div class="cert-card-meta">
+            <span class="cert-provider">
+              <i class="fas fa-building"></i>
+              Professional Internship
+            </span>
+            <span class="cert-skills">
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Teamwork</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="cert-card-footer">
+          <a href="Yuga1.jpeg" target="_blank" class="cert-btn cert-btn-primary">
+            <span class="btn-content">
+              <i class="fas fa-external-link-alt"></i>
+              View Certificate
+            </span>
+            <span class="btn-hover-effect"></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 4 - Python -->
+      <div class="cert-card" data-category="programming">
+        <div class="cert-card-glow"></div>
+        <div class="cert-card-shine"></div>
+        
+        <div class="cert-card-header">
+          <div class="cert-icon-wrapper cert-icon-python">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 9v4M9 11h6"/>
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M9 15l3-3 3 3"/>
+            </svg>
+          </div>
+          <div class="cert-header-right">
+            <span class="cert-year-badge">
+              <i class="fas fa-calendar-check"></i> 2025
+            </span>
+            <span class="cert-verified">
+              <i class="fas fa-check-circle"></i> Verified
+            </span>
+          </div>
+        </div>
+
+        <div class="cert-card-body">
+          <div class="cert-card-top">
+            <h3 class="cert-card-title">Python Development</h3>
+            <div class="cert-card-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          
+          <p class="cert-card-description">
+            Comprehensive Python programming certification from Simplilearn SkillUp. Mastered core concepts, OOP, data structures, and built hands-on projects.
+          </p>
+          
+          <div class="cert-card-meta">
+            <span class="cert-provider">
+              <i class="fas fa-building"></i>
+              Simplilearn SkillUp
+            </span>
+            <span class="cert-skills">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">OOP</span>
+              <span class="skill-tag">Projects</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="cert-card-footer">
+          <a href="python1.png.jpeg" target="_blank" class="cert-btn cert-btn-primary">
+            <span class="btn-content">
+              <i class="fas fa-external-link-alt"></i>
+              View Certificate
+            </span>
+            <span class="btn-hover-effect"></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 5 - ICAT -->
+      <div class="cert-card" data-category="assessment">
+        <div class="cert-card-glow"></div>
+        <div class="cert-card-shine"></div>
+        
+        <div class="cert-card-header">
+          <div class="cert-icon-wrapper cert-icon-icat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M12 8v4l3 3"/>
+            </svg>
+          </div>
+          <div class="cert-header-right">
+            <span class="cert-year-badge">
+              <i class="fas fa-calendar-check"></i> 2026
+            </span>
+            <span class="cert-verified">
+              <i class="fas fa-check-circle"></i> Verified
+            </span>
+          </div>
+        </div>
+
+        <div class="cert-card-body">
+          <div class="cert-card-top">
+            <h3 class="cert-card-title">ICAT Assessment</h3>
+            <div class="cert-card-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          
+          <p class="cert-card-description">
+            Internship Common Aptitude Test certification. Demonstrated excellence in logical reasoning, analytical thinking, and problem-solving abilities.
+          </p>
+          
+          <div class="cert-card-meta">
+            <span class="cert-provider">
+              <i class="fas fa-building"></i>
+              Aptitude Assessment
+            </span>
+            <span class="cert-skills">
+              <span class="skill-tag">Analytical</span>
+              <span class="skill-tag">Reasoning</span>
+              <span class="skill-tag">Problem Solving</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="cert-card-footer">
+          <a href="ICAT.png.jpeg" target="_blank" class="cert-btn cert-btn-primary">
+            <span class="btn-content">
+              <i class="fas fa-external-link-alt"></i>
+              View Certificate
+            </span>
+            <span class="btn-hover-effect"></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 6 - ChatGPT -->
+      <div class="cert-card" data-category="ai">
+        <div class="cert-card-glow"></div>
+        <div class="cert-card-shine"></div>
+        
+        <div class="cert-card-header">
+          <div class="cert-icon-wrapper cert-icon-chatgpt">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2z"/>
+              <path d="M8 12h8M12 8v8"/>
+            </svg>
+          </div>
+          <div class="cert-header-right">
+            <span class="cert-year-badge">
+              <i class="fas fa-calendar-check"></i> 2026
+            </span>
+            <span class="cert-verified">
+              <i class="fas fa-check-circle"></i> Verified
+            </span>
+          </div>
+        </div>
+
+        <div class="cert-card-body">
+          <div class="cert-card-top">
+            <h3 class="cert-card-title">ChatGPT Fundamentals</h3>
+            <div class="cert-card-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          
+          <p class="cert-card-description">
+            Comprehensive ChatGPT 101 certification from Simplilearn SkillUp. Explored AI fundamentals, prompt engineering, and practical applications.
+          </p>
+          
+          <div class="cert-card-meta">
+            <span class="cert-provider">
+              <i class="fas fa-building"></i>
+              Simplilearn SkillUp
+            </span>
+            <span class="cert-skills">
+              <span class="skill-tag">AI</span>
+              <span class="skill-tag">ChatGPT</span>
+              <span class="skill-tag">Prompt Engineering</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="cert-card-footer">
+          <a href="chat.png.jpeg" target="_blank" class="cert-btn cert-btn-primary">
+            <span class="btn-content">
+              <i class="fas fa-external-link-alt"></i>
+              View Certificate
+            </span>
+            <span class="btn-hover-effect"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enhanced Stats Bar -->
+    <div class="cert-stats-bar">
+      <div class="cert-stat">
+        <div class="cert-stat-icon">📜</div>
+        <div>
+          <span class="cert-stat-number" data-target="6">10</span>
+          <span class="cert-stat-label">Certificates</span>
+        </div>
+      </div>
+      
+      <div class="cert-stat-divider"></div>
+      
+      <div class="cert-stat">
+        <div class="cert-stat-icon">🎯</div>
+        <div>
+          <span class="cert-stat-number" data-target="12">100</span>
+          <span class="cert-stat-label">Skills Verified</span>
+        </div>
+      </div>
+      
+      <div class="cert-stat-divider"></div>
+      
+      <div class="cert-stat">
+        <div class="cert-stat-icon">🏅</div>
+        <div>
+          <span class="cert-stat-number" data-target="5">1</span>
+          <span class="cert-stat-label">Awards</span>
+        </div>
+      </div>
+      
+      <div class="cert-stat-divider"></div>
+      
+      <div class="cert-stat">
+        <div class="cert-stat-icon">🌟</div>
+        <div>
+          <span class="cert-stat-number" data-target="100">10</span>
+          <span class="cert-stat-label">% Excellence</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- Projects Section -->
-  <section id="projects">
-    <h2 class="section-title">Projects</h2>
-    <p class="section-subtitle">Some of my recent work</p>
-    <div class="projects-grid">
+  <!-- ============================================
+     PROJECTS SECTION
+     ============================================ -->
+<section id="projects">
+  <h2 class="section-title">Projects</h2>
+  <p class="section-subtitle">Some of my recent work</p>
 
-      <!-- Project 1 -->
-      <div class="project-card">
-        <div class="project-thumbnail">
-          <img src="https://www.deliworld.com/uploads/image/20250113/14/deli-em999-dual-memory-calculator.webp"
-            alt="E-Commerce Platform" />
-        </div>
-        <div class="project-content">
-          <h3>Calculator</h3>
-          <p class="project-description">A simple calculator application built with React and JavaScript, supporting
-            basic arithmetic operations and a clean, user-friendly interface.
-          </p>
+  <div class="projects-grid">
 
+    <!-- ========================================
+         Project 1 - Calculator
+         ======================================== -->
+    <div class="project-card">
+      <div class="project-thumbnail">
+        <img
+            src="https://www.deliworld.com/uploads/image/20250113/14/deli-em999-dual-memory-calculator.webp"
+            loading="lazy" decoding="async"
+          alt="Calculator Project"
+        />
+      </div>
+
+      <div class="project-content">
+        <h3>Calculator</h3>
+
+        <p class="project-description">
+          A simple calculator application built with React and JavaScript,
+          supporting basic arithmetic operations and a clean,
+          user-friendly interface.
+        </p>
+
+        <div class="project-actions">
+
+          <!-- Live Demo -->
+          <a
+            href="https://codewithroshan-2631.github.io/Calculator1/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-action live-demo"
+          >
+            <i class="fas fa-external-link-alt"></i>
+            <span>Live Demo</span>
+          </a>
+
+          <!-- GitHub -->
+          <a
+            href="https://github.com/codewithroshan-2631/Calculator1"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-action github"
+          >
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
 
         </div>
       </div>
-
-      <!-- Project 2 -->
-      <div class="project-card">
-        <div class="project-thumbnail">
-          <img
-            src="https://randomdimes.com/wp-content/uploads/2025/11/Pro-Suggestions-for-the-Best-Expense-Tracker-Apps-for-Startups-in-2022.jpg"
-            alt="Task Management App" />
-        </div>
-        <div class="project-content">
-          <h3>Expense Tracker</h3>
-          <p class="project-description">A simple expense tracking application built with React and JavaScript, allowing
-            users to log and categorize their expenses with visual summaries.</p>
-
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="project-card">
-        <div class="project-thumbnail">
-          <img
-            src="https://ewscripps.brightspotcdn.com/dims4/default/50aa6c8/2147483647/strip/true/crop/930x523+9+0/resize/1280x720!/quality/90/?url=http%3A%2F%2Fewscripps-brightspot.s3.amazonaws.com%2Fcc%2F5a%2F1d085b4f4f4494d05eede5c0202b%2Fout-the-door-forecast.png"
-            alt="Social Media Dashboard" />
-        </div>
-        <div class="project-content">
-          <h3>Weather</h3>
-          <p class="project-description">Analytics dashboard for tracking weather metrics with beautiful data
-            visualizations, real-time stats, and comprehensive performance insights.</p>
-
-        </div>
-      </div>
-
-      <!-- Project 4 -->
-      <div class="project-card">
-        <div class="project-thumbnail">
-          <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230803112523/Tic-Tac-Toe.webp"
-            alt="Weather App" />
-        </div>
-        <div class="project-content">
-          <h3>Tic Tac Toe Game</h3>
-          <p class="project-description">A classic Tic Tac Toe game built with JavaScript, HTML, and CSS, featuring a
-            responsive design and intuitive gameplay.</p>
-
-        </div>
-      </div>
-
-      <!-- Project 5 -->
-      <div class="project-card">
-        <div class="project-thumbnail">
-          <img src="https://upload.wikimedia.org/wikipedia/te/d/d9/International_Cricket_Council_%28logo%29.svg" alt="Portfolio Website" />
-        </div>
-        <div class="project-content">
-          <h3>ICCMS</h3>
-          <p class="project-description">The International Cricket Council (ICC) is the global governing body of the sport cricket. It was founded as the Imperial Cricket Conference in 1909 by Australian, English, and South African representatives. </p>
-
-        </div>
-      </div>
-
-      <!-- Project 6 -->
-      <div class="project-card">
-        <div class="project-thumbnail">
-          <img src="https://www.ilovepdf.com/img/ilovepdf/social/en-US/imagepdf.png" alt="Blog Platform" />
-        </div>
-        <div class="project-content">
-          <h3>Image To PDF</h3>
-          <p class="project-description">Convert images to PDF format with customizable options, batch processing
-            capabilities, and a clean user interface.</p>
-
-        </div>
-      </div>
-
-      <!-- Project 7 -->
-      <div class="project-card">
-        <div class="project-thumbnail">
-          <img src="https://miro.medium.com/0*4FMzgP7BdsqMIirJ" alt="Fitness Tracker" />
-        </div>
-        <div class="project-content">
-          <h3>Snake Water Gun Game</h3>
-          <p class="project-description">Track workouts, calories, and fitness progress with detailed data
-            visualizations, goal setting features, </p>
-
-        </div>
-      </div>
-      <!-- Project 8 -->
-      <div class="project-card">
-        <div class="project-thumbnail">
-          <img
-            src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&resize=700,636"
-            alt="Fitness Tracker" />
-        </div>
-        <div class="project-content">
-          <h3>Recipes</h3>
-          <p class="project-description">A collection of recipes with ingredients, instructions, and nutritional
-            information.</p>
-
-        </div>
-      </div>
-      <!-- Project 9 -->
-      <div class="project-card">
-        <div class="project-thumbnail">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRgZxdkfmU2KtQzqhuBa8G0xipYUu6031m5w&s"
-            alt="Fitness Tracker" />
-        </div>
-        <div class="project-content">
-          <h3>KBC</h3>
-          <p class="project-description">Quiz game with multiple questions and answers, interactive interface and
-            scrolling features.</p>
-
-
-        </div>
-      </div>
-      <!-- Project 10 -->
-      <div class="project-card">
-        <div class="project-thumbnail">
-          <img src="https://i0.wp.com/criplife.co.uk/wp-content/uploads/2025/01/ChatGPT-logo.jpg?resize=640%2C640&ssl=1"
-            alt="Fitness Tracker" />
-        </div>
-        <div class="project-content">
-          <h3>Chat Application</h3>
-          <p class="project-description">Real-time chat application with user authentication, message history, and group chat features.</p>
-
-
-
-        </div>
-      </div>
-       <!-- Project 11 -->
-      <div class="project-card">
-        <div class="project-thumbnail">
-          <img src="https://static-blog.onlyoffice.com/wp-content/uploads/2025/09/30124756/portfolio.png"
-            alt="Fitness Tracker" />
-        </div>
-        <div class="project-content">
-          <h3>Portfolio website</h3>
-          <p class="project-description">A responsive portfolio website showcasing projects, skills, and contact information with a modern design and smooth animations.</p>
-
-
-
-        </div>
-      </div>
-
-      <!-- Project 12 -->
-      <div class="project-card">
-        <div class="project-thumbnail">
-          <img src="https://static.vecteezy.com/system/resources/thumbnails/001/826/199/small_2x/progress-loading-bar-buffering-download-upload-and-loading-icon-vector.jpg"
-            alt="Fitness Tracker" />
-        </div>
-        <div class="project-content">
-          <h3>Loading</h3>
-          <p class="project-description">A responsive loader animation for websites with customizable styles and smooth transitions.</p>
-
-
-
-        </div>
-      </div>
-
-
     </div>
-  </section>
+
+
+    <!-- ========================================
+         Project 2 - Expense Tracker
+         ======================================== -->
+    <div class="project-card">
+      <div class="project-thumbnail">
+        <img
+            src="https://randomdimes.com/wp-content/uploads/2025/11/Pro-Suggestions-for-the-Best-Expense-Tracker-Apps-for-Startups-in-2022.jpg"
+            loading="lazy" decoding="async"
+          alt="Expense Tracker Project"
+        />
+      </div>
+
+      <div class="project-content">
+        <h3>Expense Tracker</h3>
+
+        <p class="project-description">
+          A simple expense tracking application built with React
+          and JavaScript, allowing users to log and categorize
+          their expenses with visual summaries.
+        </p>
+
+        <div class="project-actions">
+
+          <a
+            href="https://codewithroshan-2631.github.io/Expense-Tracer/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-action live-demo"
+          >
+            <i class="fas fa-external-link-alt"></i>
+            <span>Live Demo</span>
+          </a>
+
+          <a
+            href="https://github.com/codewithroshan-2631/Expense-Tracer"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-action github"
+          >
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ========================================
+         Project 3 - Weather
+         ======================================== -->
+    <div class="project-card">
+      <div class="project-thumbnail">
+        <img
+            src="https://ewscripps.brightspotcdn.com/dims4/default/50aa6c8/2147483647/strip/true/crop/930x523+9+0/resize/1280x720!/quality/90/?url=http%3A%2F%2Fewscripps-brightspot.s3.amazonaws.com%2Fcc%2F5a%2F1d085b4f4f4494d05eede5c0202b%2Fout-the-door-forecast.png"
+            loading="lazy" decoding="async"
+          alt="Weather Project"
+        />
+      </div>
+
+      <div class="project-content">
+        <h3>Weather</h3>
+
+        <p class="project-description">
+          Analytics dashboard for tracking weather metrics with
+          beautiful data visualizations, real-time stats, and
+          comprehensive performance insights.
+        </p>
+
+        <div class="project-actions">
+
+          <a
+            href="https://codewithroshan-2631.github.io/Weather/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-action live-demo"
+          >
+            <i class="fas fa-external-link-alt"></i>
+            <span>Live Demo</span>
+          </a>
+
+          <a
+            href="https://github.com/codewithroshan-2631/Weather"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-action github"
+          >
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+    
+
+    <!-- ========================================
+         Project 4 - Tic Tac Toe Game
+         ======================================== -->
+    <div class="project-card">
+      <div class="project-thumbnail">
+        <img
+            src="https://media.geeksforgeeks.org/wp-content/uploads/20230803112523/Tic-Tac-Toe.webp"
+            loading="lazy" decoding="async"
+          alt="Tic Tac Toe Game"
+        />
+      </div>
+
+      <div class="project-content">
+        <h3>Tic Tac Toe Game</h3>
+
+        <p class="project-description">
+          A classic Tic Tac Toe game built with JavaScript,
+          HTML, and CSS, featuring a responsive design and
+          intuitive gameplay.
+        </p>
+
+        <div class="project-actions">
+
+          <a
+            href="https://codewithroshan-2631.github.io/TicTacToeGame/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-action live-demo"
+          >
+            <i class="fas fa-external-link-alt"></i>
+            <span>Live Demo</span>
+          </a>
+
+          <a
+            href="https://github.com/codewithroshan-2631/TicTacToeGame"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-action github"
+          >
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ========================================
+         Project 5 - ICCMS
+         ======================================== -->
+    <div class="project-card">
+      <div class="project-thumbnail">
+        <img
+            src="https://upload.wikimedia.org/wikipedia/te/d/d9/International_Cricket_Council_%28logo%29.svg"
+            loading="lazy" decoding="async"
+          alt="ICCMS Project"
+        />
+      </div>
+
+      <div class="project-content">
+        <h3>ICCMS</h3>
+
+        <p class="project-description">
+          The International Cricket Council inspired project
+          featuring a cricket-focused interface and responsive
+          web design.
+        </p>
+
+        <div class="project-actions">
+
+          <a
+            href="https://codewithroshan-2631.github.io/ICCMS/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-action live-demo"
+          >
+            <i class="fas fa-external-link-alt"></i>
+            <span>Live Demo</span>
+          </a>
+
+          <a
+            href="https://github.com/codewithroshan-2631/ICCMS"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-action github"
+          >
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ========================================
+         Project 6 - Image To PDF
+         ======================================== -->
+    <div class="project-card">
+      <div class="project-thumbnail">
+        <img
+            src="https://www.ilovepdf.com/img/ilovepdf/social/en-US/imagepdf.png"
+            loading="lazy" decoding="async"
+          alt="Image To PDF Project"
+        />
+      </div>
+
+      <div class="project-content">
+        <h3>Image To PDF</h3>
+
+        <p class="project-description">
+          Convert images to PDF format with customizable options,
+          batch processing capabilities, and a clean user interface.
+        </p>
+
+        <div class="project-actions">
+
+          <a
+            href="https://codewithroshan-2631.github.io/ImagetoPDH/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-action live-demo"
+          >
+            <i class="fas fa-external-link-alt"></i>
+            <span>Live Demo</span>
+          </a>
+
+          <a
+            href="https://github.com/codewithroshan-2631/ImagetoPDH"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-action github"
+          >
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ========================================
+         Project 7 - Snake Water Gun Game
+         ======================================== -->
+    <div class="project-card">
+      <div class="project-thumbnail">
+        <img
+            src="https://miro.medium.com/0*4FMzgP7BdsqMIirJ"
+            loading="lazy" decoding="async"
+          alt="Snake Water Gun Game"
+        />
+      </div>
+
+      <div class="project-content">
+        <h3>Snake Water Gun Game</h3>
+
+        <p class="project-description">
+          An interactive Snake Water Gun game with simple controls,
+          responsive UI, and engaging gameplay.
+        </p>
+
+        <div class="project-actions">
+
+          <a
+            href="https://github.com/codewithroshan-2631"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-action live-demo"
+          >
+            <i class="fas fa-external-link-alt"></i>
+            <span>Live Demo</span>
+          </a>
+
+          <a
+            href="https://github.com/codewithroshan-2631"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-action github"
+          >
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ========================================
+         Project 8 - Recipes
+         ======================================== -->
+    <div class="project-card">
+      <div class="project-thumbnail">
+        <img
+            src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&resize=700,636"
+            loading="lazy" decoding="async"
+          alt="Recipes Project"
+        />
+      </div>
+
+      <div class="project-content">
+        <h3>Recipes</h3>
+
+        <p class="project-description">
+          A collection of recipes with ingredients, instructions,
+          nutritional information, and an easy-to-use interface.
+        </p>
+
+        <div class="project-actions">
+
+          <a
+            href="https://codewithroshan-2631.github.io/Recipes/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-action live-demo"
+          >
+            <i class="fas fa-external-link-alt"></i>
+            <span>Live Demo</span>
+          </a>
+
+          <a
+            href="https://github.com/codewithroshan-2631/Recipes"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-action github"
+          >
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ========================================
+         Project 9 - KBC
+         ======================================== -->
+    <div class="project-card">
+      <div class="project-thumbnail">
+        <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRgZxdkfmU2KtQzqhuBa8G0xipYUu6031m5w&s"
+            loading="lazy" decoding="async"
+          alt="KBC Quiz Project"
+        />
+      </div>
+
+      <div class="project-content">
+        <h3>KBC</h3>
+
+        <p class="project-description">
+          Quiz game with multiple questions and answers,
+          interactive interface, scoring, and engaging
+          gameplay features.
+        </p>
+
+        <div class="project-actions">
+
+          <a
+            href="https://github.com/codewithroshan-2631"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-action live-demo"
+          >
+            <i class="fas fa-external-link-alt"></i>
+            <span>Live Demo</span>
+          </a>
+
+          <a
+            href="https://github.com/codewithroshan-2631"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-action github"
+          >
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ========================================
+         Project 10 - Chat Application
+         ======================================== -->
+    <div class="project-card">
+      <div class="project-thumbnail">
+        <img
+            src="https://i0.wp.com/criplife.co.uk/wp-content/uploads/2025/01/ChatGPT-logo.jpg?resize=640%2C640&ssl=1"
+            loading="lazy" decoding="async"
+          alt="Chat Application"
+        />
+      </div>
+
+      <div class="project-content">
+        <h3>Chat Application</h3>
+
+        <p class="project-description">
+          Real-time chat application with user authentication,
+          message history, and group chat features.
+        </p>
+
+        <div class="project-actions">
+
+          <a
+            href="https://github.com/codewithroshan-2631"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-action live-demo"
+          >
+            <i class="fas fa-external-link-alt"></i>
+            <span>Live Demo</span>
+          </a>
+
+          <a
+            href="https://github.com/codewithroshan-2631"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-action github"
+          >
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ========================================
+         Project 11 - Portfolio
+         ======================================== -->
+    <div class="project-card">
+      <div class="project-thumbnail">
+        <img
+            src="https://static-blog.onlyoffice.com/wp-content/uploads/2025/09/30124756/portfolio.png"
+            loading="lazy" decoding="async"
+          alt="Portfolio Website"
+        />
+      </div>
+
+      <div class="project-content">
+        <h3>Portfolio Website</h3>
+
+        <p class="project-description">
+          A responsive portfolio website showcasing projects,
+          skills, certifications, and contact information with
+          a modern design and smooth animations.
+        </p>
+
+        <div class="project-actions">
+
+          <a
+            href="https://github.com/codewithroshan-2631"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-action live-demo"
+          >
+            <i class="fas fa-external-link-alt"></i>
+            <span>Live Demo</span>
+          </a>
+
+          <a
+            href="https://github.com/codewithroshan-2631"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-action github"
+          >
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ========================================
+         Project 12 - Loading
+         ======================================== -->
+    <div class="project-card">
+      <div class="project-thumbnail">
+        <img
+            src="https://static.vecteezy.com/system/resources/thumbnails/001/826/199/small_2x/progress-loading-bar-buffering-download-upload-and-loading-icon-vector.jpg"
+            loading="lazy" decoding="async"
+          alt="Loading Animation"
+        />
+      </div>
+
+      <div class="project-content">
+        <h3>Loading</h3>
+
+        <p class="project-description">
+          A responsive loader animation for websites with
+          customizable styles and smooth transitions.
+        </p>
+
+        <div class="project-actions">
+
+          <a
+            href="https://codewithroshan-2631.github.io/Loader/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-action live-demo"
+          >
+            <i class="fas fa-external-link-alt"></i>
+            <span>Live Demo</span>
+          </a>
+
+          <a
+            href="https://github.com/codewithroshan-2631/Loader"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-action github"
+          >
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
   <!-- Contact Section -->
   <!-- Enhanced Contact Section -->
@@ -896,15 +1823,28 @@
     <!-- Map/Footer Section -->
 
   </section>
-  <!-- Add this HTML just before the closing body tag or after the footer -->
-  <!-- Scroll to Top Button -->
-  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top" title="Go to top">
-    <div class="scroll-top-content">
-      <i class="fas fa-arrow-up"></i>
-      <span class="scroll-top-text"></span>
+  <!-- ============================================
+     PREMIUM SCROLL TO TOP BUTTON
+     ============================================ -->
+<button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
+  <div class="scroll-top-inner">
+    <div class="scroll-top-icon-wrapper">
+      <svg class="scroll-top-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+      </svg>
     </div>
-    <div class="scroll-top-progress"></div>
-  </button>
+    <span class="scroll-top-label">Top</span>
+  </div>
+  <div class="scroll-top-ring">
+    <svg viewBox="0 0 100 100" class="scroll-top-ring-svg">
+      <circle cx="50" cy="50" r="42" class="scroll-top-ring-bg"/>
+      <circle cx="50" cy="50" r="42" class="scroll-top-ring-progress" 
+              stroke-dasharray="263.89" stroke-dashoffset="263.89"/>
+    </svg>
+  </div>
+  <div class="scroll-top-pulse"></div>
+  <span class="scroll-top-tooltip">Back to Top</span>
+</button>
 
   <!-- Footer -->
   <footer>
@@ -921,3 +1861,4 @@
 </body>
 
 </html>
+
